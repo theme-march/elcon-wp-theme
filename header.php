@@ -149,7 +149,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                                       'container'=>'ul',
                                       'menu_class'=>'nav navbar-nav mr-auto',
                                       'depth'=>2,
-                                      'walker' => new Bootstrap_Walker_Nav_Menu(), 
+                                      'walker' => new WP_Bootstrap_Navwalker(), 
                                     ));?>
                                 </div>
                             </nav>
