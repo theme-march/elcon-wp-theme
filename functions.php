@@ -19,3 +19,17 @@ include "inc/enqueue.php";
  */
 
  include "inc/class-wp-bootstrap-navwalker.php";
+
+ 
+
+/**
+ * mjwp breadcrumbs 
+ */
+
+ include "inc/mj-wp-breadcrumb.php";
+
+ /**
+ * custom post type
+ */
+
+ include "inc/custom-post-type.php";

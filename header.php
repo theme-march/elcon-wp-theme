@@ -20,14 +20,13 @@ FACEBOOK: https://www.facebook.com/themefisher
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes()?>>
 
 <head>
 
     <!-- Basic Page Needs
 ================================================== -->
-    <meta charset="utf-8">
-    <title>Constra - Construction Html5 Template</title>
+    <meta <?php bloginfo('charset');?>>
 
     <!-- Mobile Specific Metas
 ================================================== -->
@@ -158,17 +157,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                     </div>
                     <!--/ Row end -->
 
-                    <div class="nav-search">
-                        <span id="search"><i class="fa fa-search"></i></span>
-                    </div><!-- Search end -->
-
-                    <div class="search-block" style="display: none;">
-                        <label for="search-field" class="w-100 mb-0">
-                            <input type="text" class="form-control" id="search-field"
-                                placeholder="Type what you want and enter">
-                        </label>
-                        <span class="search-close">&times;</span>
-                    </div><!-- Site search end -->
+                   <?php get_search_form() ?>
                 </div>
                 <!--/ Container end -->
 

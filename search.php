@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-heading">
-                        <h1 class="banner-title"><?php echo bloginfo('name') ?></h1>
+                        <h1 class="banner-title">Search Result : <?php echo get_search_query()?></h1>
                         <nav aria-label="breadcrumb">
                         <?php echo mj_wp_breadcrumb()?>
                         </nav>
