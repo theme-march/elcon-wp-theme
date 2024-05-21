@@ -33,3 +33,10 @@ include "inc/enqueue.php";
  */
 
  include "inc/custom-post-type.php";
+
+
+  /**
+ * custom metaboes post
+ */
+
+ include "inc/custom-metabox.php";
