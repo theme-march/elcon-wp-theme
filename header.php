@@ -48,7 +48,11 @@ FACEBOOK: https://www.facebook.com/themefisher
                     <div class="col-lg-8 col-md-8">
                         <ul class="top-info text-center text-md-left">
                             <li><i class="fas fa-map-marker-alt"></i>
-                                <p class="info-text">9051 Constra Incorporate, USA</p>
+                               
+                                    <?php  
+                                        $text_setting = get_theme_mod('mytheme_text_setting', 'Default Text');
+                                        echo ' <p class="info-text">' . esc_html($text_setting) . '</p>';
+                                    ?>
                             </li>
                         </ul>
                     </div>
@@ -87,7 +91,15 @@ FACEBOOK: https://www.facebook.com/themefisher
                         <div class="row align-items-center">
                             <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
                                 <a class="d-block" href="index.html">
-                                    <img loading="lazy" src="images/logo.png" alt="Constra">
+
+                                <?php
+                                        if (function_exists('the_custom_logo')) {
+                                            the_custom_logo();
+                                        } else {
+                                            echo '<h1>' . get_bloginfo('name') . '</h1>';
+                                        }
+                                ?>
+                                   
                                 </a>
                             </div><!-- logo end -->
 

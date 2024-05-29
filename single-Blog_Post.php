@@ -1,5 +1,7 @@
 
 <?php get_header(); ?>
+
+
 <div id="banner-area" class="banner-area"  style="background-image:url(<?php  echo get_template_directory_uri() ?>/images/banner/banner1.jpg)">
   <div class="banner-text">
     <div class="container">
@@ -28,11 +30,11 @@
         <div class="post-content post-single">
           <div class="post-media post-image">
           <?php
-$custom_field_value = get_post_meta(get_the_ID(), '_my_custom_field', true);
-if (!empty($custom_field_value)) {
-    echo '<p>Custom MetaBox text: ' . esc_html($custom_field_value) . '</p>';
-}
-?>
+            $custom_field_value = get_post_meta(get_the_ID(), '_my_custom_field', true);
+            if (!empty($custom_field_value)) {
+                echo '<p>Custom MetaBox text: ' . esc_html($custom_field_value) . '</p>';
+            }
+            ?>
 
           <?php 
                 // Display the featured image
@@ -100,4 +102,6 @@ if (!empty($custom_field_value)) {
 
   </div><!-- Conatiner end -->
 </section><!-- Main container end -->
+
+
 <?php get_footer()?>

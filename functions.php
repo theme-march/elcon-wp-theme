@@ -40,3 +40,13 @@ include "inc/enqueue.php";
  */
 
  include "inc/custom-metabox.php";
+
+
+
+  /**
+ * widget
+ */
+
+ include "inc/custom-sidebar-widget.php";
+ include "inc/custom-footer-widget.php";
+ include "inc/creact-custom-widget.php";
