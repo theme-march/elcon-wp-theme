@@ -61,18 +61,17 @@ FACEBOOK: https://www.facebook.com/themefisher
                     <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
                         <ul class="list-unstyled">
                             <li>
-                                <a title="Facebook" href="https://facebbok.com/themefisher.com">
-                                    <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+                                <?php $options_social_links = get_option( 'elecon_prefix_options' );
+                                 
+                                 $links_list=$options_social_links['opt-text-sdfsdf'];
+                                foreach ($links_list as $link) :
+                                ?>
+                                <a title="Facebook" href="<?php echo  $link['social-Link']?>">
+                                    <span class="social-icon"><i class="<?php echo  $link['social-icon']?>"></i></span>
                                 </a>
-                                <a title="Twitter" href="https://twitter.com/themefisher.com">
-                                    <span class="social-icon"><i class="fab fa-twitter"></i></span>
-                                </a>
-                                <a title="Instagram" href="https://instagram.com/themefisher.com">
-                                    <span class="social-icon"><i class="fab fa-instagram"></i></span>
-                                </a>
-                                <a title="Linkdin" href="https://github.com/themefisher.com">
-                                    <span class="social-icon"><i class="fab fa-github"></i></span>
-                                </a>
+                                <?php
+                                endforeach;
+                                ?>
                             </li>
                         </ul>
                     </div>

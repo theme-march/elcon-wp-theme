@@ -50,3 +50,14 @@ include "inc/enqueue.php";
  include "inc/custom-sidebar-widget.php";
  include "inc/custom-footer-widget.php";
  include "inc/creact-custom-widget.php";
+
+ /* kirki customizer */
+ if (  class_exists( 'Kirki' ) ) {
+    include "inc/kirki-customizer.php";
+}
+
+
+/* Codestart  Optins Framework*/
+
+include "inc/codestar-options-framework/codestar-framework.php";
+include "inc/codestart-optins.php";

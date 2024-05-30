@@ -4,10 +4,21 @@
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-lg-4 col-md-6 footer-widget footer-about">
-            <h3 class="widget-title">About Us</h3>
-            <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="Constra">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
-              labore et dolore magna aliqua.</p>
+            
+              <?php
+              $footer_header = get_theme_mod('footer_header_text_setting');
+              echo '<h3 class="widget-title">' . esc_html($footer_header) . '</h3>';
+              ?>
+
+              <?php $image = get_theme_mod( 'footer_image_setting_url', '' ); ?>
+
+
+            
+            <img loading="lazy" width="200px" class="footer-logo" src="<?php echo esc_url( $image ); ?>" alt="Constra">
+            <?php
+              $footer_desp = get_theme_mod('footer_desp_text_setting');
+              echo '<p>' . esc_html($footer_desp) . '</p>';
+              ?>
             <div class="footer-social">
               <ul>
                 <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
@@ -31,13 +42,10 @@
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
             <h3 class="widget-title">Services</h3>
-            <ul class="list-arrow">
-              <li><a href="service-single.html">Pre-Construction</a></li>
-              <li><a href="service-single.html">General Contracting</a></li>
-              <li><a href="service-single.html">Construction Management</a></li>
-              <li><a href="service-single.html">Design and Build</a></li>
-              <li><a href="service-single.html">Self-Perform Construction</a></li>
-            </ul>
+          
+              <?php  $footer_right_desp = get_theme_mod('footer_right_text_setting');
+              echo  wp_kses_post($footer_right_desp) ; ?>
+             
           </div><!-- Col end -->
         </div><!-- Row end -->
       </div><!-- Container end -->
@@ -48,9 +56,11 @@
         <div class="row align-items-center">
           <div class="col-md-6">
             <div class="copyright-info">
-              <span>Copyright &copy; <script>
-                  document.write(new Date().getFullYear())
-                </script>, Designed &amp; Developed by <a href="https://themefisher.com">Themefisher</a></span>
+              <?php $options = get_option( 'elecon_prefix_options' );?>
+              <span>
+                <?php echo esc_html( $options['opt-text-hkglg'])?>
+              </span>
+              
             </div>
           </div>
 
